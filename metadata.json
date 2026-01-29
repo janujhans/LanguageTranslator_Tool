@@ -1,0 +1,8 @@
+{
+  "name": "LinguaAI",
+  "description": "A high-performance, AI-powered language translation suite featuring real-time text streaming, visual document translation, and live voice-to-voice conversation using Google's Gemini models.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

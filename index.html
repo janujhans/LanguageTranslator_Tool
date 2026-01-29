@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LanguaAI </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              screen: '#f0ce37',   // Vibrant yellow background
+              container: '#dedbb8', // Pale olive container
+              dark: '#1C1C1C',
+              gray: '#F5F5F5',
+              darkBg: '#0D0D0D',    // Deep dark background
+              darkContainer: '#1F1F1F' // Darker olive/gray container
+            }
+          },
+          animation: {
+            'slide-up': 'slideUp 0.4s ease-out forwards',
+            'bounce-subtle': 'bounceSubtle 2s infinite',
+          },
+          keyframes: {
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            bounceSubtle: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-5px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #1C1C1C22; border-radius: 10px; }
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #FFFFFF22; }
+  </style>
+
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans overflow-x-hidden bg-brand-screen dark:bg-brand-darkBg text-brand-dark dark:text-white">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
